@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Area</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .discord-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .discord-card {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .discord-card h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .discord-card p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .discord-button {
+            background-color: #7289DA;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .discord-button:hover {
+            transform: scale(1.05);
+            background-color: #5b6eae;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .feature-item {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .feature-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rules.html">Rules</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="applications.html" class="active">Applications</a></li>
+    <li><a href="discord.html">Discord</a></li>
+</ul>
+
+    </nav>
+
+    <main class="discord-container">
+        <div class="discord-card">
+            <h2>Apply to Join Our Departments</h2>
+            <p>Please choose the department you wish to apply for below:</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Police Department</h3>
+                <p>Apply to serve and protect the community.</p>
+                <a href="https://forms.gle/police-app-link" target="_blank" class="discord-button">Apply Now</a>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-ambulance"></i>
+                <h3>EMS Department</h3>
+                <p>Apply to provide emergency medical services.</p>
+                <a href="https://forms.gle/ems-app-link" target="_blank" class="discord-button">Apply Now</a>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-friends"></i>
+                <h3>Civilian Role</h3>
+                <p>Apply for a general roleplay position.</p>
+                <a href="https://forms.gle/civ-app-link" target="_blank" class="discord-button">Apply Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
