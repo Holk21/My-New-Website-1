@@ -161,3 +161,23 @@ const animateFeatureCards = () => {
 };
 
 animateFeatureCards(); 
+
+
+async function updatePlayerCount() {
+    const playerCountElement = document.getElementById('playerCount');
+    if (!playerCountElement) return;
+
+    try {
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/z64p9d'); // Replace with your CFX server ID
+        const data = await response.json();
+        const players = data.Data.clients;
+        const maxPlayers = data.Data.sv_maxclients;
+        playerCountElement.textContent = `${players}/${maxPlayers}`;
+    } catch (error) {
+        playerCountElement.textContent = 'Unavailable';
+        console.error('Error fetching player count:', error);
+    }
+}
+
+updatePlayerCount();
+setInterval(updatePlayerCount, 30000);
