@@ -197,3 +197,21 @@ function updateDateTime() {
 }
 setInterval(updateDateTime, 1000);
 updateDateTime();
+
+
+async function updateLivePlayerCount() {
+    try {
+        const res = await fetch('https://servers-frontend.fivem.net/api/servers/single/z64p9d');
+        const data = await res.json();
+        const players = data.Data.clients;
+        const max = data.Data.sv_maxclients;
+        const el = document.getElementById('livePlayerCount');
+        if (el) el.textContent = `${players}/${max}`;
+    } catch (e) {
+        const el = document.getElementById('livePlayerCount');
+        if (el) el.textContent = 'Unavailable';
+        console.error('Error loading player count', e);
+    }
+}
+setInterval(updateLivePlayerCount, 30000);
+updateLivePlayerCount();
