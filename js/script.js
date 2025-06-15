@@ -181,3 +181,19 @@ async function updatePlayerCount() {
 
 updatePlayerCount();
 setInterval(updatePlayerCount, 30000);
+
+
+function updateDateTime() {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-NZ', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+    const timeStr = now.toLocaleTimeString('en-NZ');
+    const fullStr = `${dateStr} - ${timeStr}`;
+    const timeDiv = document.getElementById('currentDateTime');
+    if (timeDiv) {
+        timeDiv.textContent = fullStr;
+    }
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
